@@ -9,7 +9,7 @@ load_dotenv()  # Load variables from .env file
 account_sid = os.getenv("account_sid")
 print(account_sid)
 
-key = "e878e6cdc797a025cf7d709e67c2c963"
+key = "******************"
 lat=51.5072
 lon=0.1276
 weather_params= {
@@ -37,13 +37,13 @@ weather_ids = [weather['id'] for item in data['list'] for weather in item['weath
 
 for weather_id in weather_ids:
     if weather_id / 100 < 7:
-        account_sid = "ACaae275699e16aa44a3c31df6810c0e5b"
-        auth_token = '5c5cb6b60ed76bb38dc5e013f662f411'
+        account_sid = "*****************"
+        auth_token = '*******************'
         client = Client(account_sid, auth_token)
         message = client.messages \
             .create(
             body=f"Its going to rain today 😛 in {data['city']['name']}",
-            from_='+12138954731',
-            to='+16478773721'
+            from_='+12138954***',
+            to='+1647877****'
         )
         break
